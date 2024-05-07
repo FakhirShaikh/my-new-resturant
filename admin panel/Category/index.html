@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FS-Restaurant-admin-panel-Category-page</title>
+	<link rel="icon" href="../../images/cutlery.png">
+	<link rel="stylesheet" href="style.css">
+
+	
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	
+	<!-- toastify -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+
+</head>
+
+<body>
+	<div>
+		<!-- for header part -->
+		<header>
+			<div class="logo">
+				<img src="../../images/icons/icons8-menu-50.png" class="icon menuicon" alt="menu-icon">
+				<div class="logoname">FS-Restaurant...</div>
+			</div>
+			<div class="message">
+				<div class="circle"></div>
+				<img src="../../images/icons/icons8-bell-50.png" class="icon" alt="">
+				<div class="dp">
+					<img src="../../images/icons/icons8-administrator-male-50.png" class="dpicon" alt="dp">
+				</div>
+			</div>
+		</header>
+
+		<div class="main-container">
+			<div class="nav-container">
+				<nav class="nav">
+					<div class="nav-upper-options">
+						<div class="nav-option option1">
+							<h3>
+								<a href="../dashboard/index.html">
+									<img src="../../images/icons/icons8-dashboard-layout-50.png" class="nav-img"
+										alt="dashboard">
+									Dashboard
+								</a>
+							</h3>
+						</div>
+
+						<div class="nav-option option2">
+							<h3>
+								<a href="../Category/index.html">
+									<img src="../../images/icons/icons8-restaurant-menu-50.png" class="nav-img"
+										alt="report">
+									Category
+								</a>
+							</h3>
+						</div>
+
+						<div class="nav-option option3">
+							<h3>
+								<a href="../dishes/index.html" id="Dishes">
+									<img src="../../images/icons/icons8-street-food-50.png" class="nav-img"
+										alt="articles">
+									Dishes
+								</a>
+							</h3>
+						</div>
+
+						<div class="nav-option option4">
+							<h3>
+								<a href="" id="order">
+									<img src="../../images/icons/icons8-order-50.png" class="nav-img" alt="articles">
+									Orders
+								</a>
+							</h3>
+						</div>
+
+
+						<div class="nav-option option5">
+							<h3>
+								<a href="" id="Profile">
+									<img src="../../images/icons/icons8-edit-account-50.png" class="nav-img" alt="blog">
+									Profile
+								</a>
+							</h3>
+						</div>
+
+						<div class="nav-option option6">
+							<h3>
+								<a href="" id="Settings">
+									<img src="../../images/icons/icons8-setting-50.png" class="nav-img" alt="settings">
+									Settings
+								</a>
+							</h3>
+						</div>
+
+						<div class="nav-option logout">
+							<h3>
+								<a id="Logout">
+									<img src="../../images/icons/icons8-logout-50.png" class="nav-img" alt="logout">
+									Logout
+								</a>
+							</h3>
+						</div>
+
+					</div>
+				</nav>
+			</div>
+			<div class="main">
+				<div class="add-Category">
+					<h1 class="Category-heading">Add Category</h1>
+					<img class="add-button" src="../../images/icons/icons8-add-50.png" alt="" data-bs-toggle="modal"
+						data-bs-target="#exampleModal" onclick="add_Category_function()">
+				</div>
+
+				<div class="table" >
+					<div class="table-head">
+						<h1 class="recent-order">Categories</h1>
+						<button class="view-all-orders">View All</button>
+					</div>
+	
+					<div class="table-body">
+						<div class="table-heading">
+							<h3 class="tr">No</h3>
+							<h3 class="tr">Category Name</h3>
+							<h3 class="tr">Category Image</h3>
+							<h3 class="tr">Action</h3>
+						</div>
+	
+						<div class="table-data" id="Categories-data">
+							<!-- <div class="item1">
+								<h3 class="tr-td">1</h3>
+								<h3 class="tr-td">Article 65</h3>
+								<h3 class="tr-td">220</h3>
+								<h3 class="tr-td table-status">Published</h3>
+							</div> -->
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="exampleModal" tabindex="-1">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title Category-title">Category</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<input type="text" class="form-control mt-2" placeholder="Enter Category Name" id="Category-name">
+						<div class="Category_edit_img">
+							<img src="" id="Category_edit_image" style="display: none;">
+						</div>
+						<input type="file" class="form-control mt-4" id="Category-image">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary madal-close" data-bs-dismiss="modal"
+							id="modal1">Close</button>
+						<button type="button" class="btn btn-primary Save-changes" onclick="addCategory()"
+							id="Add_btn" disabled>Add Category</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- bootstrap -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+		
+		<!-- toastify -->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+	<!-- firebase -->
+	<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+	<script src="../../configuration/app.js"></script>
+
+
+	<script src="../dashboard/app.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,618 @@
+/* Main CSS Here */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Laila:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Laila", serif;
+}
+
+:root {
+    --background-color1: rgba(0, 0, 0, 0.618);
+    --background-color2: #ffffffef;
+    --background-color3: #ededed;
+    --background-color4: #434343ac;
+    --font-color: rgb(255, 136, 0);
+    --Border-color: rgb(255, 132, 0);
+    --one-use-color: rgb(255, 142, 21);
+    --two-use-color: rgb(255, 164, 67);
+}
+
+body {
+    background-color: var(--background-color4);
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    height: 70px;
+    width: 100vw;
+    padding: 0 30px;
+    background-color: var(--background-color1);
+    position: fixed;
+    z-index: 100;
+    box-shadow: 1px 1px 30px rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logoname {
+    font-size: 2.5em;
+    font-weight: 800;
+    font-family: "Dancing Script", cursive;
+    color: var(--font-color);
+
+}
+
+
+.icon {
+    height: 30px;
+}
+
+.menuicon {
+    cursor: pointer;
+    padding-right: 500px;
+}
+
+.message,
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.logo {
+    gap: 60px;
+}
+
+.message {
+    gap: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.circle{
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    left: 18px;
+    top: 10px;
+    
+}
+
+.dp{
+    height: 40px;
+    width: 40px;
+    background-color: --;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+
+.dpicon {
+    height: 45px;
+}
+
+.main-container {
+    display: flex;
+    width: 100vw;
+    position: relative;
+    top: 70px;
+    z-index: 1;
+}
+
+.nav-container {
+    height: calc(100vh - 70px);
+    width: 250px;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.nav-container::-webkit-scrollbar-thumb {
+    background-image:
+        linear-gradient(to bottom, rgba(255, 162, 0, 0.739), rgba(255, 162, 0, 0.705));
+}
+
+.nav-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.nav-container::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+
+.nav{
+    min-height: 91vh;
+    width: 250px;
+    background-color: var(--background-color2);
+    position: absolute;
+    top: 0px;
+    left: 00;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.825);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 30px 0 20px 10px !important;
+}
+
+.navclose {
+    width: 70px;
+}
+
+.nav-option {
+    width: 250px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px 0 10px;
+    gap: 20px !important;
+    transition: all 0.1s ease-in-out;
+}
+.nav-upper-options a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:black;
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+.nav-option:hover {
+    border-left: 5px solid #a2a2a2;
+    background-color: #dadada;
+    cursor: pointer;
+}
+
+.nav-img {
+    height: 30px !important;
+    padding-right: 30px !important;
+}
+
+.nav-upper-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.option1 {
+    border-left: 5px solid var(--background-color1);
+    background-color: var(--Border-color);
+    cursor: pointer;
+}
+
+.option1:hover {
+    border-left: 5px solid var(--background-color1);
+    background-color: var(--Border-color);
+}
+
+.main{
+    height: calc(100vh - 70px);
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 40px 30px 30px 30px;
+}
+
+.main::-webkit-scrollbar-thumb {
+    background-image:
+        linear-gradient(to bottom, rgba(255, 136, 0), rgba(255, 136, 0));
+}
+
+.main::-webkit-scrollbar {
+    width: 6px;
+}
+
+.main::-webkit-scrollbar-track {
+    background-color: #ffffff;
+}
+.box-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.box {
+    height: 130px;
+    width: 230px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 30, 87, 0.751);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.08);
+}
+
+.box:nth-child(1) {
+    background-color: var(--one-use-color);
+}
+
+.box:nth-child(2) {
+    background-color: var(--two-use-color);
+}
+
+.box:nth-child(3) {
+    background-color: var(--one-use-color);
+}
+
+.box:nth-child(4) {
+    background-color: var(--two-use-color);
+}
+
+.box img {
+    height: 50px;
+}
+
+.box .text {
+    color: white;
+}
+
+.topic {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.topic-heading {
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+.table{
+    min-height: 300px;
+    max-width: 1030px;
+    margin: 70px auto 0px auto;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 3px 3px 10px rgb(188, 188, 188);
+    padding: 0px 20px 20px 20px;
+}
+
+.table-head{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px 10px 20px;
+    border-bottom: 2px solid var(--one-use-color);
+}
+
+.recent-order {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.view-all-orders{
+    height: 35px;
+    width: 100px;
+    border-radius: 8px;
+    background-color: var(--one-use-color);
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.table-body{
+    max-width: 1060px;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.table-heading{
+    width: 920px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item1{
+    width: 950px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.tr{
+    font-weight: 800;
+    font-size: 18px;
+    letter-spacing: 0px;
+}
+
+/* .table-data {
+    margin-top: 15px;
+} */
+
+.item1{
+    margin-top: 20px;
+}
+
+.tr-td {
+    font-size: 14px;
+    letter-spacing: 0px;
+    font-weight: 600;
+}
+
+.table-status {
+    width: 100px;
+    text-align: center;
+    background-color: rgb(0, 177, 0);
+    color: white;
+    border-radius: 4px;
+}
+
+
+/* Responsive CSS Here */
+
+@media screen and (max-width: 1135px) {
+
+    .menuiocn {
+        padding-right: 400px;
+    }
+
+
+}
+
+@media screen and (max-width: 950px) {
+    .nav-img {
+        height: 25px;
+    }
+
+    .nav-option {
+        gap: 30px;
+    }
+
+    .nav-option h3 {
+        font-size: 15px;
+    }
+
+    .report-topic-heading,
+    .item1,
+    .items {
+        width: 800px;
+    }
+
+    .menuicon {
+        padding-right: 400px;
+    }
+}
+@media screen and (max-width:925px) {
+    .menuicon {
+        padding-right: 300px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .nav-img {
+        height: 30px;
+    }
+
+    .nav-option {
+        gap: 30px;
+    }
+
+    .nav-option h3 {
+        font-size: 20px;
+    }
+
+    .report-topic-heading,
+    .item1,
+    .items {
+        width: 700px;
+    }
+
+    .navcontainer {
+        width: 100vw;
+        position: absolute;
+        transition: all 0.6s ease-in-out;
+        top: 0;
+        left: -100vw;
+    }
+
+    .nav {
+        width: 100%;
+        position: absolute;
+    }
+
+    .navclose {
+        left: 00px;
+    }
+
+    .searchbar {
+        display: none;
+    }
+
+    .main {
+        padding: 40px 30px 30px 30px;
+    }
+
+    .searchbar2 {
+        width: 100%;
+        display: flex;
+        margin: 0 0 40px 0;
+        justify-content: center;
+    }
+
+    .searchbar2 input {
+        width: 250px;
+        height: 42px;
+        border-radius: 50px 0 0 50px;
+        background-color: var(--background-color3);
+        padding: 0 20px;
+        font-size: 15px;
+        border: 2px solid var(--secondary-color);
+    }
+
+  
+
+    .menuicon {
+        padding-right: 200px;
+    }
+}
+@media screen and (max-width: 725px) {
+    .menuicon {
+        padding-right: 150px;
+    }
+}
+@media screen and (max-width: 665px) {
+    .menuicon {
+        padding-right: 100px;
+    }
+}
+@media screen and (max-width: 605px) {
+    .menuicon {
+        padding-right: 50px;
+    }
+}
+@media screen and (max-width: 560px) {
+    .menuicon {
+        padding-right: 25px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .message {
+        display: none;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    /* .logo {
+        font-size: 1.5em;
+        margin-left: 250px;
+    } */
+
+    .menuicon {
+        height: 25px;
+    }
+
+    .nav-img {
+        height: 25px;
+    }
+
+    .nav-option {
+        gap: 25px;
+    }
+
+    .nav-option h3 {
+        font-size: 12px;
+    }
+
+    .nav-upper-options {
+        gap: 15px;
+    }
+
+    .recent-Articles {
+        font-size: 20px;
+    }
+
+    .report-topic-heading,
+    .item1,
+    .items {
+        width: 550px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* .logo {
+        font-size: 1em;
+        margin-left: 200px;
+    } */
+    
+    .recent-Articles {
+        font-size: 17px;
+    }
+
+    .view {
+        width: 60px;
+        font-size: 10px;
+        height: 27px;
+    }
+
+    .report-header {
+        height: 60px;
+        padding: 10px 10px 5px 10px;
+    }
+
+    .searchbtn img {
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    /* .logo {
+        font-size: 0.7em;
+        margin-left: 150px;
+    } */
+    
+    .recent-Articles {
+        font-size: 12px;
+    }
+
+    .view {
+        width: 50px;
+        font-size: 8px;
+        height: 27px;
+    }
+
+    .report-header {
+        height: 60px;
+        padding: 10px 5px 5px 5px;
+    }
+
+    .t-op {
+        font-size: 12px;
+    }
+
+    .t-op-nextlvl {
+        font-size: 10px;
+    }
+
+    .report-topic-heading,
+    .item1,
+    .items {
+        width: 300px;
+    }
+
+    .report-body {
+        padding: 10px;
+    }
+
+    .label-tag {
+        width: 70px;
+    }
+
+    .searchbtn {
+        width: 40px;
+    }
+
+    .searchbar2 input {
+        width: 180px;
+    }
+}
